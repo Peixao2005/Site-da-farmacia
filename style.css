@@ -1,0 +1,41 @@
+:root {
+    --cor-60: #f4f6f8;
+    --cor-30: #0d9488;
+    --cor-30-escuro: #0a7a70;
+    --cor-10: #e53e3e;
+    --branco: #fff;
+    --texto: #2d3748;
+    --borda: #d1d5db;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: Arial, sans-serif; background: var(--cor-60); color: var(--texto); }
+.topo { background: var(--cor-30); color: var(--branco); padding: 16px; display: flex; flex-direction: column; gap: 10px; }
+.topo nav { display: flex; gap: 10px; flex-wrap: wrap; }
+.topo nav a { color: var(--branco); text-decoration: none; background: var(--cor-30-escuro); padding: 8px 14px; border-radius: 6px; }
+.topo nav a.ativo, .topo nav a:hover { background: var(--cor-10); }
+.conteudo { padding: 16px; max-width: 1100px; margin: 0 auto; }
+h2 { margin-bottom: 16px; color: var(--cor-30); }
+.card { background: var(--branco); padding: 14px; border-radius: 10px; margin-bottom: 12px; box-shadow: 0 1px 4px rgba(0,0,0,0.08); border-left: 4px solid var(--cor-30); }
+.card p { margin: 4px 0; }
+.acoes { margin-top: 10px; display: flex; gap: 8px; flex-wrap: wrap; }
+.btn { display: inline-block; padding: 8px 14px; border-radius: 6px; text-decoration: none; color: var(--branco); border: none; cursor: pointer; font-size: 0.9rem; }
+.btn-primario { background: var(--cor-30); }
+.btn-editar { background: #d97706; }
+.btn-excluir { background: var(--cor-10); }
+.form-card { background: var(--branco); padding: 20px; border-radius: 10px; max-width: 500px; box-shadow: 0 1px 4px rgba(0,0,0,0.08); }
+.form-grupo { margin-bottom: 14px; }
+.form-grupo label { display: block; margin-bottom: 6px; font-weight: bold; }
+.form-grupo input { width: 100%; padding: 10px; border: 1px solid var(--borda); border-radius: 6px; }
+.alerta { padding: 10px 14px; border-radius: 6px; margin-bottom: 14px; }
+.alerta-sucesso { background: #d1fae5; color: #065f46; }
+.alerta-erro { background: #fee2e2; color: #991b1b; }
+.tabela-wrapper { display: none; }
+.rodape { text-align: center; padding: 16px; margin-top: 30px; border-top: 1px solid var(--borda); }
+@media (min-width: 768px) {
+    .topo { flex-direction: row; justify-content: space-between; align-items: center; }
+    .card { display: none; }
+    .tabela-wrapper { display: block; background: var(--branco); border-radius: 10px; overflow: hidden; box-shadow: 0 1px 4px rgba(0,0,0,0.08); }
+    .tabela-wrapper table { width: 100%; border-collapse: collapse; }
+    .tabela-wrapper th, .tabela-wrapper td { padding: 12px; border-bottom: 1px solid var(--borda); text-align: left; }
+    .tabela-wrapper th { background: var(--cor-30); color: var(--branco); }
+}
